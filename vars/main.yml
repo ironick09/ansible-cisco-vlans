@@ -1,0 +1,2 @@
+---
+vlan_config: "{{ vlan_config }}"

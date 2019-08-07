@@ -1,0 +1,4 @@
+---
+- name: "ROLE: Vlans, tasks for NXOS"
+  include_tasks: os/nxos.yml
+  when: ansible_network_os == "nxos"

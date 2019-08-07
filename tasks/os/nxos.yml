@@ -1,0 +1,11 @@
+---
+- name: NXOS - Configure vlans on device
+  nxos_vlan:
+    vlan_id: "{{ item['vlan'] }}"
+    name: "{{ item['name'] }}"
+    vlan_state: active
+  with_items: "{{ vlan_config }}"
+
+- name: NXOS - Save vlan configuration
+  nxos_config:
+    save_when: modified
